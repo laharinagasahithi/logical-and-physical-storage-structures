@@ -1,0 +1,29 @@
+Logical Storage Structures:
+
+racle Database allocates logical space for all data in the database. 
+The logical units of database space allocation are data blocks, extents, segments, and tablespaces.
+At a physical level, the data is stored in data files on disk.
+The data in the data files is stored in operating system blocks.
+
+Physical Storage Structures:
+
+One characteristic of an RDBMS is the independence of logical data structures such as tables, views, and indexes from physical storage structures.
+Because physical and logical structures are separate, you can manage physical storage of data without affecting access to logical structures. 
+For example, renaming a database file does not rename the tables stored in it.
+
+An Oracle database is a set of files that store Oracle data in persistent disk storage. 
+This section discusses the database files generated when you issue a CREATE DATABASE statement:
+
+Data files and temp files
+
+A data file is a physical file on disk that was created by Oracle Database and contains data structures such as tables and indexes.
+A temp file is a data file that belongs to a temporary tablespace.
+The data is written to these files in an Oracle proprietary format that cannot be read by other programs.
+
+Control files
+
+A control file is a root file that tracks the physical components of the database.
+
+Online redo log files
+
+The online redo log is a set of files containing records of changes made to data.
